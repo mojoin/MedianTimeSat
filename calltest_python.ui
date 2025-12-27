@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CallTest_PythonClass</class>
+ <widget class="QMainWindow" name="CallTest_PythonClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>674</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CallTest_Python</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>数据选择与数据设置</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,9">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>gee 项目 id：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="projectId"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="5">
+         <item>
+          <widget class="QComboBox" name="SatelliteSelection">
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>10</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox QAbstractItemView::item {
+    min-height: 5px;      /* 调整这个值增大整体行高，比如 50px */
+	padding: 2px 2px;
+    padding-left: 8px;     /* 可选：左边距 */
+}
+
+QComboBox QAbstractItemView {
+    selection-background-color: #a0d0ff;  /* 可选：选中项背景色，美化 */
+}</string>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">选择卫星影像数据</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Sentinel-2 (哨兵2号)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Landsat 9(陆地卫星)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Landsat 8(陆地卫星)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Landsat 5, 1984-2012(陆地卫星)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string extracomment="1999-至今, 但2003年后有条带丢失">Landsat 7(陆地卫星)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MODIS (中分辨率成像光谱仪)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SRTM (航天飞机雷达地形测绘任务)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NASADEM (SRTM 的改进版)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ALOS DSM (全球 3D 表面)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Sentinel-1 (哨兵1号)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ESA WorldCover (欧空局全球土地覆盖)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ESRI Global Land Cover(来源于社区)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="characteristic">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QGridLayout" name="gridLayout" columnstretch="1,9">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>最大云量 (%)：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="CloudThreshold"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string>开始日期：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDateEdit" name="startDateEdit">
+            <property name="dateTime">
+             <datetime>
+              <hour>0</hour>
+              <minute>0</minute>
+              <second>0</second>
+              <year>2023</year>
+              <month>1</month>
+              <day>1</day>
+             </datetime>
+            </property>
+            <property name="displayFormat">
+             <string>yyyy-M-d</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>结束日期：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDateEdit" name="endDateEdit">
+            <property name="dateTime">
+             <datetime>
+              <hour>0</hour>
+              <minute>0</minute>
+              <second>0</second>
+              <year>2023</year>
+              <month>1</month>
+              <day>31</day>
+             </datetime>
+            </property>
+            <property name="displayFormat">
+             <string>yyyy-M-d</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>空间分辨率（米）：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="scale">
+            <property name="maximum">
+             <number>1000000000</number>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>选择shp+导出路径：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QPushButton" name="pushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>下载数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>终端信息返回显示区域</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="calltest_python.qrc"/>
+ </resources>
+ <connections/>
+</ui>
